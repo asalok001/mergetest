@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Call Method</title>
-  </head>
-  <body>
-    <h3>Call Method</h3>
 
-    <script>
-      var person = {
-        age: 23,
-        // name: 'Alok Singh',   // only age can be returned
-        getAge: function () {
-          return this.age;
-        },
-      };
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Call Method</title>
+</head>
 
-      var person2 = { age: 29 };
-      console.log(person.getAge.call(person2));
+<body>
+  <h3>Call Method</h3>
 
-      var person3 = { firstName: "Jon", lastName: "Kuperman" };
-      var person4 = { firstName: "Kelly", lastName: "King" };
+  <h2> New branch test</h2>
+  <h4>Agai nbranch test</h4>
 
-      function say(greeting) {
-        console.log(greeting + " " + this.firstName + " " + this.lastName);
-      }
+  <script>
+    var person = {
+      age: 23,
+      // name: 'Alok Singh',   // only age can be returned
+      getAge: function () {
+        return this.age;
+      },
+    };
 
-      say.call(person3, "Hello", "How Are You"); // Hello Jon Kuperman   only first string will be returned. So only one string can be use for one parameter (greeting)
-      say.call(person4, "How Are You"); // Hello Kelly King
-    </script>
-  </body>
+    var person2 = { age: 29 };
+    console.log(person.getAge.call(person2));
+
+    var person3 = { firstName: "Jon", lastName: "Kuperman" };
+    var person4 = { firstName: "Kelly", lastName: "King" };
+
+    function say(greeting) {
+      console.log(greeting + " " + this.firstName + " " + this.lastName);
+    }
+
+    say.call(person3, "Hello", "How Are You"); // Hello Jon Kuperman   only first string will be returned. So only one string can be use for one parameter (greeting)
+    say.call(person4, "How Are You"); // Hello Kelly King
+  </script>
+</body>
+
 </html>
