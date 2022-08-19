@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Scope</title>
+</head>
+<body>
+    <h2>Block Scope</h2>
+
+    <script>
+        // block scope does not work on variables with var
+        {var y = 10};
+        console.log('Block of y', y); // outputs 10
+
+
+        // Block scope is related to let and const variables only
+        {let x = 10};
+        console.log('Block of x', x); // Reference Error x is not defined
+
+    </script>
+</body>
+</html>
